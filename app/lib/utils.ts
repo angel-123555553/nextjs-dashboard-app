@@ -21,6 +21,10 @@ export const formatDateToLocal = (
   return formatter.format(date);
 };
 
+export function isValidUUID(uuid: string) {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(uuid);
+}
+
 export const generateYAxis = (revenue: Revenue[]) => {
   // Calculate what labels we need to display on the y-axis
   // based on highest record and in 1000s
